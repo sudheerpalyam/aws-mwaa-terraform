@@ -43,9 +43,11 @@ output "s3_bucket_name" {
 output "access_key_id" {
   value       = aws_iam_access_key.dags.id
   description = "Access Key ID to push data to the dags bucket."
+  sensitive   = true
 }
 
 output "secret_access_key" {
   value       = aws_iam_access_key.dags.secret
   description = "Secret Access Key to push data to the dags bucket."
+  sensitive   = true
 }
